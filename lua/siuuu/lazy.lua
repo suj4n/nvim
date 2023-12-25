@@ -64,19 +64,28 @@ local plugins = {
     "windwp/nvim-autopairs",
 
     'folke/twilight.nvim',
-
+    {
+        "utilyre/barbecue.nvim",
+        name = "barbecue",
+        version = "*",
+        dependencies = {
+            "SmiteshP/nvim-navic",
+            "nvim-tree/nvim-web-devicons", -- optional dependency
+        },
+        opts = {
+            -- configurations go here
+        },
+    },
+    {
+    'Bekaboo/dropbar.nvim',
+    -- optional, but required for fuzzy finder support
+    dependencies = {
+      'nvim-telescope/telescope-fzf-native.nvim'
+    }
+  },
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 
-    {
-        "folke/which-key.nvim",
-        event = "VeryLazy",
-        init = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-        end,
-        opts = {}
-    },
-    --{
+        --{
         --'lucastavaresa/simpleIndentGuides.nvim',
         --config = function()
             --vim.opt.list = true -- enable in all buffersrequire

@@ -10,6 +10,7 @@ if not luasnip_status then
     return
 end
 
+
 -- load VSCode-like snippets from plugins (e.g., friendly-snippets)
 
 
@@ -38,4 +39,26 @@ cmp.setup({
         { name = "buffer" }, -- text within the current buffer
         { name = "path" }, -- file system paths
     }),
+    native_menu = false, -- disable default completion menu
 })
+
+local ELLIPSIS_CHAR = '…'
+local MAX_LABEL_WIDTH = 20
+local MIN_LABEL_WIDTH = 20
+
+cmp.setup({
+    formatting = {
+        format = function(entry, vim_item)
+            local label = vim_item.abbr
+            local truncated_label = vim.fn.strcharpart(label, 0, MAX_LABEL_WIDTH)
+            if truncated_label ~= label then
+                vim_item.abbr = truncated_label .. ELLIPSIS_CHAR
+            elseif string.len(label) < MIN_LABEL_WIDTH then
+                local padding = string.rep(' ', MIN_LABEL_WIDTH - string.len(label))
+                vim_item.abbr = label .. padding
+            end
+            return vim_item
+        end,
+    },
+  })
+  
