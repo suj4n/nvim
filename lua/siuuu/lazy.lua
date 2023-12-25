@@ -39,19 +39,23 @@ local plugins = {
 
     'nvim-telescope/telescope-ui-select.nvim',
     
+    --LSP Support
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
 
-    -- LSP Support
     {'neovim/nvim-lspconfig'},
     -- Autocompletion
-    {'hrsh7th/nvim-cmp'},
-    {'hrsh7th/cmp-nvim-lsp'},
+    {"hrsh7th/nvim-cmp"}, -- completion plugin
+    {"hrsh7th/cmp-buffer"}, -- source for text in buffer
+    {"hrsh7th/cmp-path"}, -- source for file system paths    
+    --snippets
     {
         "L3MON4D3/LuaSnip",
         version = "v2.*",
         build = "make install_jsregexp"
     },
+    {"saadparwaiz1/cmp_luasnip"}, -- for autocompletion
+    {"rafamadriz/friendly-snippets"}, -- useful snippets
 
     'github/copilot.vim',
 

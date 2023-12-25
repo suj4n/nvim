@@ -30,9 +30,8 @@ vim.g.loaded_matchparen = true
 vim.g.show_trailing_blankline_indent = true
 
 vim.opt.pumheight = 8
-vim.opt.pumwidth = 10
-
-vim.opt.completeopt = "menuone,noselect"
+--vim.opt.pumwidth = 20
 
 vim.opt.shortmess:append("c")
 
+vim.g.clipboard = "unnamedplus"
