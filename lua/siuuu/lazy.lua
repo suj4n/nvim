@@ -38,7 +38,7 @@ local plugins = {
     },
 
     'nvim-telescope/telescope-ui-select.nvim',
-    
+
     --LSP Support
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
@@ -61,6 +61,12 @@ local plugins = {
 
     --goodiess
 
+    "nvim-lua/plenary.nvim", -- don't forget to add this one if you don't have it yet!
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { {"nvim-lua/plenary.nvim"} },
+    },
     "windwp/nvim-autopairs",
 
     'folke/twilight.nvim',
@@ -76,47 +82,40 @@ local plugins = {
             -- configurations go here
         },
     },
-    {
-    'Bekaboo/dropbar.nvim',
-    -- optional, but required for fuzzy finder support
-    dependencies = {
-      'nvim-telescope/telescope-fzf-native.nvim'
-    }
-  },
     {'akinsho/toggleterm.nvim', version = "*", config = true},
 
-        --{
+    --{
         --'lucastavaresa/simpleIndentGuides.nvim',
         --config = function()
             --vim.opt.list = true -- enable in all buffersrequire
             --require("simpleIndentGuides").setup()
             --end
-        --},
+            --},
 
-        "lukas-reineke/indent-blankline.nvim",
+            "lukas-reineke/indent-blankline.nvim",
 
-        "xiyaowong/transparent.nvim",
+            "xiyaowong/transparent.nvim",
 
-        --colorschemes
-        "EdenEast/nightfox.nvim",
-        "rebelot/kanagawa.nvim",
-        { 'cryptomilk/nightcity.nvim', version = '*' },
-        {
-            "folke/tokyonight.nvim",
-            lazy = false,
-            priority = 1000,
-            opts = {},
-        },
-        'RRethy/nvim-base16',
-        {
-            "xero/miasma.nvim",
-            lazy = false,
-            priority = 1000,
-            config = function()
-                vim.cmd("colorscheme miasma")
-            end,
-        },
-    }
+            --colorschemes
+            "EdenEast/nightfox.nvim",
+            "rebelot/kanagawa.nvim",
+            { 'cryptomilk/nightcity.nvim', version = '*' },
+            {
+                "folke/tokyonight.nvim",
+                lazy = false,
+                priority = 1000,
+                opts = {},
+            },
+            'RRethy/nvim-base16',
+            {
+                "xero/miasma.nvim",
+                lazy = false,
+                priority = 1000,
+                config = function()
+                    vim.cmd("colorscheme miasma")
+                end,
+            },
+        }
 
 
         require("lazy").setup(plugins, opts )

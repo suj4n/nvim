@@ -5,12 +5,12 @@ require('lualine').setup {
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         disabled_filetypes = {
-            statusline = {},
+            statusline = {"NvimTree"},
             winbar = {},
         },
         ignore_focus = {},
         always_divide_middle = true,
-        globalstatus = true,
+        globalstatus = false,
         refresh = {
             statusline = 1000,
             tabline = 1000,
