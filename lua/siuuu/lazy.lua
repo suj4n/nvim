@@ -61,7 +61,8 @@ local plugins = {
     'github/copilot.vim',
 
     --goodiess
-
+    
+    "lewis6991/gitsigns.nvim",
     "nvim-lua/plenary.nvim", -- don't forget to add this one if you don't have it yet!
     {
         "ThePrimeagen/harpoon",
