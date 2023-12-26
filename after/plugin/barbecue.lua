@@ -2,7 +2,7 @@ require("barbecue").setup({
     ---Whether to attach navic to language servers automatically.
     ---
     ---@type boolean
-    attach_navic = true,
+    attach_navic = false,
 
     ---Whether to create winbar updater autocmd.
     ---
@@ -43,7 +43,7 @@ require("barbecue").setup({
     ---Whether to display file name.
     ---
     ---@type boolean
-    show_basename = true,
+    show_basename = false,
 
     ---Whether to replace file icon with the modified symbol when buffer is
     ---modified.
@@ -91,11 +91,8 @@ require("barbecue").setup({
     ---Theme to be used for generating highlight groups dynamically.
     ---
     ---@type barbecue.Config.theme
-    theme = "auto",
+    theme = auto; 
 
-    ---Whether context text should follow its icon's color.
-    ---
-    ---@type boolean
     context_follow_icon_color = false,
 
     symbols = {

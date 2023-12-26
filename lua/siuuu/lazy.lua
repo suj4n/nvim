@@ -20,7 +20,7 @@ local plugins = {
     {
         'nvim-telescope/telescope.nvim', 
         version = "0.1.5",
-        dependencies = { {'nvim-lua/plenary.nvim'} }
+        dependencies = { 'nvim-lua/plenary.nvim'}
     },
 
     --ui related
@@ -36,7 +36,8 @@ local plugins = {
         'stevearc/dressing.nvim',
         opts = {},
     },
-
+    
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     'nvim-telescope/telescope-ui-select.nvim',
 
     --LSP Support
