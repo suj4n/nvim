@@ -43,11 +43,11 @@ require("barbecue").setup({
     ---Whether to display file name.
     ---
     ---@type boolean
-    show_basename = false,
+    show_basename = true,
 
     ---Whether to replace file icon with the modified symbol when buffer is
     ---modified.
-    ---
+    
     ---@type boolean
     show_modified = true,
 
