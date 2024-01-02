@@ -22,7 +22,7 @@ local plugins = {
         version = "0.1.5",
         dependencies = { 'nvim-lua/plenary.nvim'}
     },
-
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' },
     --ui related
     {
         'nvim-lualine/lualine.nvim',
@@ -36,8 +36,7 @@ local plugins = {
         'stevearc/dressing.nvim',
         opts = {},
     },
-    
-    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+
     'nvim-telescope/telescope-ui-select.nvim',
 
     --LSP Support
@@ -61,7 +60,7 @@ local plugins = {
     'github/copilot.vim',
 
     --goodiess
-    
+
     "lewis6991/gitsigns.nvim",
     "nvim-lua/plenary.nvim", -- don't forget to add this one if you don't have it yet!
     {
