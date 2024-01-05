@@ -116,8 +116,9 @@ local plugins = {
                     vim.cmd("colorscheme miasma")
                 end,
             },
+            "ThePrimeagen/vim-be-good",
         }
-
+    
 
         require("lazy").setup(plugins, opts )
 

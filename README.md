@@ -12,13 +12,13 @@ This is my Neovim config completely written in lua
 
 ### Linux
 ```bash
-git clone https://github.com/5uj4n/nvim ~/.config/nvim
+git clone https://github.com/suj4n/nvim ~/.config/nvim
 ```
 note: If  you want to use this  config. First remove or backup the nvim directory from your config folder.
 .
 
 ### Windows
 ```bash
-git clone https://github.com/5uj4n/nvim "$env:LOCALAPPDATA\nvim"
+git clone https://github.com/suj4n/nvim "$env:LOCALAPPDATA\nvim"
 ```
 
