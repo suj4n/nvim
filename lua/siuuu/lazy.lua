@@ -62,7 +62,7 @@ local plugins = {
     --goodiess
 
     "lewis6991/gitsigns.nvim",
-    "nvim-lua/plenary.nvim", -- don't forget to add this one if you don't have it yet!
+    "nvim-lua/plenary.nvim",
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
@@ -93,6 +93,8 @@ local plugins = {
             --end
             --},
 
+                { "CRAG666/code_runner.nvim", config = true },
+
             "lukas-reineke/indent-blankline.nvim",
 
             "xiyaowong/transparent.nvim",
@@ -118,7 +120,7 @@ local plugins = {
             },
             "ThePrimeagen/vim-be-good",
         }
-    
+
 
         require("lazy").setup(plugins, opts )
 

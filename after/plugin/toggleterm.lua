@@ -29,3 +29,5 @@ toggleterm.setup {
 local keymap = vim.keymap.set
 local s_opts = { silent = true }
 keymap("t", "<esc>", [[<C-\><C-n>]], s_opts)
+keymap("n", "<leader>t", vim.cmd.ToggleTerm)
+
